@@ -1,0 +1,9 @@
+/target/
+/login-output/
+/allure-results/
+/Evidencia/
+.idea/
+/src/reports/
+/src/screenshots/
+testngTest.xml
+CoreFrameworkAndroid.iml
