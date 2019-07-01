@@ -21,10 +21,7 @@
 -Steps:
 
     -1.- Connect your mobile devices in your computer.
-
-    -2.- Active D
-    -3.- Get the UDID of your mobiles with the next command.
+    -2.- Get the UDID of your mobiles with the next command.
          adb devices
          Then open TestNG file and put the result in "udid" parameter.
-
-    -4.- Run TestNG.xml file
+    -3.- Run TestNG.xml file
