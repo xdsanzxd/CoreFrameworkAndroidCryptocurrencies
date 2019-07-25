@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="BancomerMovilAndroid" parallel="tests" thread-count="15">
+
+    <!--NOTE: Change the parameters with "#######" and verify the ports-->
+    <!-- With this structure you can run multiple devices at the same time.-->
+
+    <test name="Regression - LG mobile x">
+        <parameter name="browserName" value="Chrome"/>
+        <parameter name="deviceName" value="LG"/>
+        <parameter name="platformName" value="Android"/>
+        <parameter name="platformVersion" value="7.0"/>
+        <parameter name="udid" value="#######"/>
+        <parameter name="automationName" value="UiAutomator2"/>
+        <parameter name="port" value="4724"/>
+        <parameter name="author" value="FernandoXr"/>
+        <classes>
+
+            <class name="CP001">
+                <methods>
+                    <include name="getStadistics24hrs"/>
+                    <include name="getGraphCoins"/>
+                    <include name="getCurrentGainersCoin"/>
+                </methods>
+            </class>
+
+        </classes>
+    </test>
+
+  <!--
+  <test name="Regresion - Motorola x ">
+        <parameter name="browserName" value="Chrome"/>
+        <parameter name="deviceName" value="Motorola x"/>
+        <parameter name="platformName" value="Android"/>
+        <parameter name="platformVersion" value="8.1"/>
+        <parameter name="udid" value="#########"/>
+        <parameter name="automationName" value="UiAutomator2"/>
+        <parameter name="port" value="4725"/>
+        <parameter name="author" value="FernandoXr"/>
+        <classes>
+
+           <class name="CP001">
+                <methods>
+                    <include name="getStadistics24hrs"/>
+                    <include name="getGraphCoins"/>
+                    <include name="getCurrentGainersCoin"/>
+                </methods>
+            </class>
+
+        </classes>
+    </test>
+  -->
+
+</suite>
+
+
