@@ -30,16 +30,15 @@ public class Service {
         capabilities.setCapability("platformName", platformName);
         capabilities.setCapability("platformVersion", platformVersion);
         capabilities.setCapability("udid", udid);
-
+        capabilities.setCapability(MobileCapabilityType.CLEAR_SYSTEM_FILES, true);
         //Only use when you have installed the app in your mobile
-            // capabilities.setCapability("appPackage", "###########");
-            // capabilities.setCapability("appActivity", "##########");
-            // capabilities.setCapability("skipDeviceInitialization",true);
+        capabilities.setCapability("appPackage", "com.binance.dev");
+        capabilities.setCapability("appActivity", "com.binance.dev.SplashActivity");
+        // capabilities.setCapability("skipDeviceInitialization",true);
 
         capabilities.setCapability("noReset", true);
         capabilities.setCapability("fullReset", false);
-        capabilities.setCapability("app", app);
-        capabilities.setCapability(MobileCapabilityType.CLEAR_SYSTEM_FILES, true);
+        //capabilities.setCapability("app", app);
 
         // Skip the installation of io.appium.settings app and the UIAutomator 2 server.
         //  capabilities.setCapability("skipDeviceInitialization", true);

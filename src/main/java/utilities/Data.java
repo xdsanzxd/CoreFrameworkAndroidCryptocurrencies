@@ -18,6 +18,7 @@ public class Data {
         if (ThreadLocalDriver.getTLDriver() == null) {
             app = capability(browserName, deviceName, platformName, platformVersion, udid, automationName, port);
             System.out.print(author);
+            System.out.print("Driver" + deviceName + "Started");
         } else {
             ThreadLocalDriver.getTLDriver().launchApp();
         }

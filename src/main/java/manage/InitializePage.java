@@ -2,6 +2,7 @@ package manage;
 
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import org.openqa.selenium.support.PageFactory;
+
 import java.time.Duration;
 
 public abstract class InitializePage {
