@@ -1,7 +1,7 @@
 package utilities;
 
+import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.TouchAction;
-import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.touch.WaitOptions;
 import io.appium.java_client.touch.offset.PointOption;
@@ -25,7 +25,7 @@ import static manage.ThreadLocalDriver.getTLDriver;
 
 public class Tools {
 
-    public static AndroidDriver driver = getTLDriver();
+    public static AppiumDriver driver = getTLDriver();
     public static TouchAction action = new TouchAction(driver);
     static DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd-HH:mm:ss");
     static LocalDateTime now = LocalDateTime.now();

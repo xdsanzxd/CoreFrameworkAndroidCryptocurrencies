@@ -4,8 +4,27 @@
 
     <!--NOTE: Change the parameters with "#######" and verify the ports-->
     <!-- With this structure you can run multiple devices at the same time.-->
+    <test name="Regresion - WEB">
+        <parameter name="browserName" value=""/>
+        <parameter name="deviceName" value=""/>
+        <parameter name="platformName" value=""/>
+        <parameter name="platformVersion" value=""/>
+        <parameter name="udid" value="#########"/>
+        <parameter name="automationName" value=""/>
+        <parameter name="port" value=""/>
+        <parameter name="author" value="FernandoXr"/>
+        <parameter name="wdaLocalPort" value=""/>
+        <classes>
+            <class name="Web.CP001">
+                <methods>
+                    <include name="abrirPagina"/>
+                </methods>
+            </class>
 
-    <test name="Regression - Xiaomi">
+        </classes>
+    </test>
+
+    <test name="Regression - ANDROID">
         <parameter name="browserName" value=""/>
         <parameter name="deviceName" value="Xiaomi"/>
         <parameter name="platformName" value="Android"/>
@@ -14,9 +33,10 @@
         <parameter name="automationName" value="UiAutomator2"/>
         <parameter name="port" value="4724"/>
         <parameter name="author" value="FernandoXr"/>
-        <classes>
+        <parameter name="wdaLocalPort" value="8100"/>
 
-            <class name="CP001">
+        <classes>
+            <class name="Android.CP001">
                 <methods>
                     <include name="getPurchaseComparation"/>
                   <!--  <include name="getStadistics24hrs"/>
@@ -28,29 +48,9 @@
         </classes>
     </test>
 
-  <!--
-  <test name="Regresion - Motorola x ">
-        <parameter name="browserName" value="Chrome"/>
-        <parameter name="deviceName" value="Motorola x"/>
-        <parameter name="platformName" value="Android"/>
-        <parameter name="platformVersion" value="8.1"/>
-        <parameter name="udid" value="#########"/>
-        <parameter name="automationName" value="UiAutomator2"/>
-        <parameter name="port" value="4725"/>
-        <parameter name="author" value="FernandoXr"/>
-        <classes>
 
-           <class name="CP001">
-                <methods>
-                    <include name="getStadistics24hrs"/>
-                    <include name="getGraphCoins"/>
-                    <include name="getCurrentGainersCoin"/>
-                </methods>
-            </class>
 
-        </classes>
-    </test>
-  -->
+
 
 </suite>
 

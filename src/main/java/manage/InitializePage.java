@@ -10,4 +10,6 @@ public abstract class InitializePage {
     protected InitializePage() {
         PageFactory.initElements(new AppiumFieldDecorator(ThreadLocalDriver.getTLDriver(), Duration.ofSeconds(20)), this);
     }
+
+
 }

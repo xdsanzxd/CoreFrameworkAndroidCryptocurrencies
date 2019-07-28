@@ -1,16 +1,16 @@
 package manage;
 
-import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.AppiumDriver;
 
 public class ThreadLocalDriver {
 
-    private static ThreadLocal<AndroidDriver<?>> tlDriver = new ThreadLocal<AndroidDriver<?>>();
+    private static ThreadLocal<AppiumDriver<?>> tlDriver = new ThreadLocal<>();
 
-    public static synchronized AndroidDriver<?> getTLDriver() {
+    public static synchronized AppiumDriver<?> getTLDriver() {
         return tlDriver.get();
     }
 
-    public static synchronized void setTLDriver(AndroidDriver<?> driver) {
+    public static synchronized void setTLDriver(AppiumDriver<?> driver) {
         tlDriver.set(driver);
     }
 }

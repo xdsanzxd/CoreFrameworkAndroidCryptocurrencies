@@ -1,4 +1,4 @@
-package pages;
+package pages.Android;
 
 
 import io.appium.java_client.android.AndroidElement;
@@ -256,19 +256,19 @@ public class MainPage extends InitializePage {
             case ada:
                 btnAda.click();
                 System.out.print("\n\n" + ConsoleColors.BLACK + "======= A D A =========" + ConsoleColors.RESET + "\n");
-                ObtainCoinProfit(SatochisAda, PriceAda , PURCHASE_PRICE_DOLLAR_ADA, PURCHASE_PRICE_SATOCHIS_ADA );
+                ObtainCoinProfit(SatochisAda, PriceAda, PURCHASE_PRICE_DOLLAR_ADA, PURCHASE_PRICE_SATOCHIS_ADA);
                 break;
 
             case powr:
                 btnPowr.click();
                 System.out.print("\n\n" + ConsoleColors.BLACK + "======= POWR =========" + ConsoleColors.RESET + "\n");
-                ObtainCoinProfit(SatochisPowr, PricePowr, PURCHASE_PRICE_DOLLAR_POWR  , PURCHASE_PRICE_SATOCHIS_POWR );
+                ObtainCoinProfit(SatochisPowr, PricePowr, PURCHASE_PRICE_DOLLAR_POWR, PURCHASE_PRICE_SATOCHIS_POWR);
                 break;
 
             case nano:
                 btnNano.click();
                 System.out.print("\n\n" + ConsoleColors.BLACK + "======= NANO =========" + ConsoleColors.RESET + "\n");
-                ObtainCoinProfit(SatochisNano, PriceNano, PURCHASE_PRICE_DOLLAR_NANO , PURCHASE_PRICE_SATOCHIS_NANO);
+                ObtainCoinProfit(SatochisNano, PriceNano, PURCHASE_PRICE_DOLLAR_NANO, PURCHASE_PRICE_SATOCHIS_NANO);
                 break;
 
             case omg:
@@ -296,7 +296,7 @@ public class MainPage extends InitializePage {
             case xmr:
                 btnXmr.click();
                 System.out.print("\n\n" + ConsoleColors.BLACK + "======= X M R =========" + ConsoleColors.RESET + "\n");
-                ObtainCoinProfit(SatochisXmr , PriceXmr , PURCHASE_PRICE_DOLLAR_XMR , PURCHASE_PRICE_SATOCHIS_XMR );
+                ObtainCoinProfit(SatochisXmr, PriceXmr, PURCHASE_PRICE_DOLLAR_XMR, PURCHASE_PRICE_SATOCHIS_XMR);
 
                 break;
 
