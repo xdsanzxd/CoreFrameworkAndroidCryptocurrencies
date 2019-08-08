@@ -1,11 +1,10 @@
 package utilities;
 
+import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.TouchAction;
-import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.touch.WaitOptions;
 import io.appium.java_client.touch.offset.PointOption;
-import manage.ThreadLocalDriver;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.io.FileHandler;
@@ -26,22 +25,21 @@ import static manage.ThreadLocalDriver.getTLDriver;
 
 public class Tools {
 
-    private static AndroidDriver driver = getTLDriver();
+    public static AppiumDriver driver = getTLDriver();
+    public static TouchAction action = new TouchAction(driver);
+    static DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd-HH:mm:ss");
+    static LocalDateTime now = LocalDateTime.now();
+    public static String fecha = dtf.format(now);
     private static int HEIGHT_SCREEN = driver.manage().window().getSize().getHeight();
     private static final int yOffset = HEIGHT_SCREEN / 2;
     private static int WIDTH_SCREEN = driver.manage().window().getSize().getWidth();
     private static final int xOffset = WIDTH_SCREEN / 2;
-    public static TouchAction action = new TouchAction(driver);
-
-    static DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd-HH:mm:ss");
-    static LocalDateTime now = LocalDateTime.now();
-    public static String fecha = dtf.format(now);
 
     public static void captureScreenShot(String name) {
         try {
             TakesScreenshot ts = (TakesScreenshot) getTLDriver();
 
-            String screenshotsFolder = "src/screenshots/"+ fecha ;
+            String screenshotsFolder = "src/screenshots/" + fecha;
 
             File directory = new File(screenshotsFolder);
 
@@ -53,6 +51,7 @@ public class Tools {
             System.out.println(e.getMessage());
         }
     }
+
     public static void swipeUp() {
         action.press(PointOption.point(xOffset, yOffset))
                 .waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2)))
